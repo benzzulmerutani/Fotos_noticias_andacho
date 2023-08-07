@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center page-title">Crear Noticia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <ion-card class="add-news-card">
+    <ion-card-content>
+      <ion-item lines="none">
+        <ion-label position="floating" class="input-label">Título de la Noticia</ion-label>
+        <ion-input type="text" required [(ngModel)]="post.title" class="input-field"></ion-input>
+      </ion-item>
+
+      <ion-item lines="none">
+        <ion-label position="floating" class="input-label">Detalles de la Noticia</ion-label>
+        <ion-textarea required [(ngModel)]="post.details" class="input-field"></ion-textarea>
+      </ion-item>
+
+      <div class="photo-button-container">
+        <ion-button (click)="takePhoto()" class="photo-button" fill="clear">
+          <ion-icon name="camera-outline" class="photo-icon"></ion-icon>
+          Tomar Foto
+        </ion-button>
+      </div>
+
+      <ion-button color="primary" expand="full" (click)="createPost(post)" class="create-button">
+        Crear Noticia
+      </ion-button>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

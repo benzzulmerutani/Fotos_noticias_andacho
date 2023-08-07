@@ -1,0 +1,21 @@
+<!-- Use the ngIf directive to conditionally show or hide the ion-tabs element -->
+<ion-tabs>
+  <ion-tab-bar slot="bottom" *ngIf="router.url !== '/login' && router.url !== '/register'">
+    <ion-tab-button tab="home">
+      <ion-icon name="chatbubble"></ion-icon>
+      General
+    </ion-tab-button>
+    <ion-tab-button tab="fotos">
+      <ion-icon name="image"></ion-icon>
+      Fotos
+    </ion-tab-button>
+    <ion-tab-button tab="library">
+      <ion-icon name="information-circle"></ion-icon>
+      About
+    </ion-tab-button>
+    <ion-tab-button tab="search">
+      <ion-icon name="person"></ion-icon>
+      Usuario
+    </ion-tab-button>
+  </ion-tab-bar>
+</ion-tabs>

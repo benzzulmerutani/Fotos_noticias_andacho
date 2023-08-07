@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center header-title">Regístrese aquí</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="content">
+  <div class="content-container" animation="fade-in-up">
+    <ion-card class="register-card">
+      <ion-card-header class="card-header">
+        <ion-icon name="person-add-outline" class="register-icon"></ion-icon>
+      </ion-card-header>
+      <ion-card-content>
+        <ion-item class="input-item">
+          <ion-label position="floating">
+            <ion-icon name="mail" class="input-icon"></ion-icon>
+            Su correo
+          </ion-label>
+          <ion-input class="input-field" type="email" [(ngModel)]="user.email" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label position="floating">
+            <ion-icon name="lock-closed" class="input-icon"></ion-icon>
+            Contraseña
+          </ion-label>
+          <ion-input class="input-field" type="password" [(ngModel)]="user.password" required></ion-input>
+        </ion-item>
+
+        <ion-item class="input-item">
+          <ion-label position="floating">
+            <ion-icon name="lock-closed" class="input-icon"></ion-icon>
+            Confirmar contraseña
+          </ion-label>
+          <ion-input class="input-field" type="password" [(ngModel)]="user.confirmPassword" required></ion-input>
+        </ion-item>
+
+        <ion-button class="register-button" color="primary" expand="full" (click)="register(user)">
+          Registrarme
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
+</ion-content>
+
+

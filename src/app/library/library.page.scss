@@ -1,0 +1,38 @@
+/* styles.css */
+.header-title {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .about-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .about-card {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .author-info,
+  .copyright-info {
+    margin: 20px;
+  }
+  
+  .info-label {
+    font-size: 18px;
+    font-weight: bold;
+  }
+  
+  .author-info ion-label,
+  .author-info ion-icon,
+  .copyright-info ion-label {
+    margin-bottom: 10px;
+  }
+  
+  

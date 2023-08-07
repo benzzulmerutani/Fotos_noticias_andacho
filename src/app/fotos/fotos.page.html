@@ -1,0 +1,41 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar color="success">
+    <ion-title>
+       Foto Noticias
+    </ion-title>
+  </ion-toolbar>
+</ion-header> -->
+
+<ion-header [translucent]="true">
+  <ion-toolbar color="primary">
+    <ion-title class="ion-text-center">
+      <ion-icon name="newspaper-outline" class="header-icon"></ion-icon>
+      <span class="header-title">Foto Noticias</span>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<!-- In your HTML template -->
+<ion-content>
+  <ion-grid>
+    <!-- Create a new ion-row element for each image -->
+    <ng-container *ngFor="let image of images">
+      <ion-row>
+        <ion-col class="image-container">
+          <img src="{{ image }}" alt="Image from Firestore" />
+          <!-- Add a button for sharing the image on WhatsApp -->
+          <ion-button (click)="shareImage(image)"><ion-icon name="logo-whatsapp"></ion-icon> Compartir  </ion-button>
+        </ion-col>
+      </ion-row>
+    </ng-container>
+  </ion-grid>
+</ion-content>
+
+<!-- Add CSS styles to center the image and button -->
+<style>
+  .image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+</style>
